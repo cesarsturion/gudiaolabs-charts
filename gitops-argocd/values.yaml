@@ -8,11 +8,11 @@ image:
   repository: csturion/gitops-argocd
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: 838672f
+  tag: 838672fa
 
 imagePullSecrets: []
-nameOverride: 838672f
-fullnameOverride: 838672f
+nameOverride: 838672fa
+fullnameOverride: 838672fa
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -21,7 +21,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: 838672f
+  name: 838672fa
 
 podAnnotations: {}
 
@@ -42,7 +42,7 @@ service:
 
 ingress:
   enabled: false
-  className: 838672f
+  className: 838672fa
   annotations: {}
     # kubernetes.io/ingress.class: nginx
     # kubernetes.io/tls-acme: "true"
