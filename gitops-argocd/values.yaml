@@ -10,7 +10,7 @@ image:
   repository: csturion/gitops-argocd
   pullPolicy: IfNotPresent
   # Overrides the image tag whose staging is the chart appVersion.
-  tag: f53c865
+  tag: b928fde
 
 service:
   type: ClusterIP
