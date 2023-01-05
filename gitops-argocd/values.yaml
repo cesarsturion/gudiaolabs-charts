@@ -1,16 +1,16 @@
 # Default values for gitops-argocd.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
-namespace: staging
-env: staging
+namespace: production
+env: production
 
 replicaCount: 1
 
 image:
   repository: csturion/gitops-argocd
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose staging is the chart appVersion.
-  tag: 3fe9e2e
+  # Overrides the image tag whose production is the chart appVersion.
+  tag: v-14
 
 service:
   type: ClusterIP
