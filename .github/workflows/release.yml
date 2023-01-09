@@ -18,8 +18,8 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config user.name "${{ env.GIT_USER_NAME }}"
-          git config user.email "${{ env.GIT_USER_EMAIL }}"
+          git config --global user.name "${{ env.GIT_USER_NAME }}"
+          git config --global user.email "${{ env.GIT_USER_EMAIL }}"
 
       - name: Install Helm
         uses: azure/setup-helm@v3
