@@ -31,4 +31,15 @@ entries:
     urls:
     - https://github.com/gudiaolabs/gudiaolabs-charts/releases/download/gitops-argocd-0.1.3/gitops-argocd-0.1.3.tgz
     version: 0.1.3
-generated: "2023-01-17T20:39:08.091849897Z"
+  muscat:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-01-23T19:14:54.08859044Z"
+    description: A Helm chart for Kubernetes
+    digest: a8b7ce423a767fd8a9607d6e13480e80dc4a3a9a10f3a459960eef9e16719da1
+    name: muscat
+    type: application
+    urls:
+    - https://github.com/gudiaolabs/gudiaolabs-charts/releases/download/muscat-0.1.3/muscat-0.1.3.tgz
+    version: 0.1.3
+generated: "2023-01-23T19:14:54.08861064Z"
