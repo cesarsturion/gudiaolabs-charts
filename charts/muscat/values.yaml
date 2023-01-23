@@ -13,7 +13,7 @@ replicaCount: 1
 strategyType: RollingUpdate
 
 image:
-  repository: "435521002653.dkr.ecr.us-east-1.amazonaws.com/muscat"
+  repository: "csturion/muscat"
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: cfb316f
