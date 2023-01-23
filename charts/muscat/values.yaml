@@ -4,8 +4,8 @@
 
 # Campos Obrigatorios
   # name: valiant
-  # default production | default | qa
-namespace: default
+  # muscat production | muscat | qa
+namespace: muscat
 name: muscat
 environment: staging
 
@@ -15,8 +15,8 @@ strategyType: RollingUpdate
 image:
   repository: "435521002653.dkr.ecr.us-east-1.amazonaws.com/muscat"
   pullPolicy: IfNotPresent
-  # Overrides the image tag whose default is the chart appVersion.
-  tag: cfb316f
+  # Overrides the image tag whose muscat is the chart appVersion.
+  tag: 17735fa
 
 services:
   enabled: true
