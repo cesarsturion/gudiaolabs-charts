@@ -1,0 +1,30 @@
+{{- if .Values.services.enabled }}
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ $.Values.name }}
+  namespace: {{ required "A valid .Values.global.namespace entry required!" $.Values.namespace }}
+  labels:
+    {{- include "muscat.labels" . | nindent 4 }}
+spec:
+  ports:
+  {{- if .Values.services }}  
+  - name: {{ .Values.services.protocolType | default "http" }}
+    port: {{ .Values.services.port | default "80" }}
+    targetPort: {{ .Values.services.targetPort | default "80" }}
+  {{- else }}  
+  - name: {{ default "http" }}
+    port: {{ default "80" }}
+    targetPort: {{ default "80" }}
+  {{- end }}    
+    protocol: TCP
+  selector:
+    {{- include "muscat.selectorLabels" . | nindent 4 }}
+  sessionAffinity: None      
+  {{- if .Values.services }}  
+  type: {{ .Values.services.type | default "ClusterIP" }}  
+  {{- else }}  
+  type: {{ default "ClusterIP" }}  
+  {{- end }}    
+---
+{{- end }}

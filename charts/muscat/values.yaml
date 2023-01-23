@@ -1,0 +1,33 @@
+# Default values for muscat.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+# Campos Obrigatorios
+  # name: valiant
+  # default production | default | qa
+namespace: default
+name: muscat
+environment: staging
+
+replicaCount: 1
+strategyType: RollingUpdate
+
+image:
+  repository: "435521002653.dkr.ecr.us-east-1.amazonaws.com/muscat"
+  pullPolicy: IfNotPresent
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: cfb316f
+
+services:
+  enabled: true
+  type: ClusterIP
+  port: 9090
+  targetPort: 9090
+
+resources: 
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
