@@ -16,7 +16,7 @@ image:
   repository: "csturion/muscat"
   pullPolicy: IfNotPresent
   # Overrides the image tag whose muscat is the chart appVersion.
-  tag: 17735fa
+  tag: b3d91c2
 
 services:
   enabled: true
